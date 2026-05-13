@@ -45,7 +45,6 @@ jobs:
           echo "keyPassword=123456" >> android/key.properties
           echo "keyAlias=upload" >> android/key.properties
           echo "storeFile=upload-keystore.jks" >> android/key.properties
-          echo "{}" > android/app/google-services.json
 
       - name: Compile APK
         run: |
