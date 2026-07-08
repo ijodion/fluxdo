@@ -11,9 +11,12 @@ jobs:
       - name: Checkout Upstream Code
         uses: actions/checkout@v4
         with:
-          repository: 'Lingyan000/fluxdo' # 👈 修改这里：填入上游原作者的仓库（例如 aaa/fluxdo）
-          ref: 'main' # 👈 修改这里：如果原作者的主分支叫 master，请改成 master
+          repository: 'Lingyan000/fluxdo' 
+          ref: 'main' 
           submodules: recursive
+          # 👇 新增下面这两行：拉取完整的 Git 历史和标签
+          fetch-depth: 0 
+          fetch-tags: true
 
       - name: Setup Java
         uses: actions/setup-java@v4
