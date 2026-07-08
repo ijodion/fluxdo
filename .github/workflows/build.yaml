@@ -24,7 +24,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.38.9'
+          channel: 'stable' # ✅ 动态获取最新的稳定版 Flutter (包含了最新的 Dart SDK)
           cache: true
 
       - name: Setup Rust
